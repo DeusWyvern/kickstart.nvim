@@ -207,12 +207,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
---
--- Load neotree on new tab
-vim.api.nvim_create_autocmd('TabNew', {
-  group = vim.api.nvim_create_augroup('NeotreeOnNewTab', { clear = true }),
-  command = 'Neotree',
-})
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`
