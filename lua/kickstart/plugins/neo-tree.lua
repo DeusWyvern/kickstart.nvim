@@ -10,6 +10,15 @@ return {
     'MunifTanjim/nui.nvim',
   },
   lazy = false,
+  config = function()
+    require('neo-tree').setup {
+      -- config here
+    }
+    -- Open on startup
+    vim.defer_fn(function()
+      vim.cmd 'Neotree show'
+    end, 100)
+  end,
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
